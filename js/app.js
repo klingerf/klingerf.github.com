@@ -657,8 +657,11 @@ window.addEvent('domready', function(){
 		.addClass('loading')
 		
 	if (_3n.global_user) {
-		new Element('p', {'class':'shits_custom', html:"This site has been customized for " + _3n.global_user + "."}).inject($('footer'),'before')
+		new Element('p', {'class':'shits_custom', html:'This site has been customized for ' + _3n.global_user + '.'}).inject($('footer'),'before')
 		$('footer').addClass('custom')
+	} else if (_3n.twitter_user != '3n') {
+		new Element('p', {'class':'shits_custom', html:'The theme for this site has been borrowed from <a href="http://www.iancollins.me/">3N</a>.'}).inject($('footer'),'before')
+		$('footer').destroy()
 	} 
 		
 	$('fun-zone').set('html', '<span class="title">in</span><span class="title">summary</span>')	
