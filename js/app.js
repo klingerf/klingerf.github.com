@@ -668,7 +668,7 @@ window.addEvent('domready', function(){
 
 	if (navigator.userAgent.match('iPhone')) document.body.addClass('iphone');
 	
-	_3n.delicious_tags = params()['delicious_tags'] || 'humor-awesome'
+	_3n.delicious_tags = params()['delicious_tags'] || 'recipes'
 	
 	if (!$defined(Cookie.read('grid_latest_'+_3n.global_user))) $(document.body).addClass('all-new')
 	_3n.grid_latest = new Hash.Cookie('grid_latest_'+_3n.global_user, {duration:100, path: '/'})
